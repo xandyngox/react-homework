@@ -1,31 +1,25 @@
-import React from 'react';
+import React from "react";
 
 class Block extends React.Component {
-   
-    //ADD CODE HERE
-    
-  render() {
-
-  const mystyle = {
-      // ADD CODE HERE
-    };
-
-  return (
-    <>
-      <div class = "blockers" style={
-        // ADD CODE HERE
-        }>
-      </div>
-      
-      <div className="bottom">
-          <div className="white"></div>
-      </div>
-
-
-    </>
-      );
-    }
+  constructor(props) {
+    super(props);
   }
 
+  render() {
+    const mystyle = {
+      backgroundColor: this.props.color,
+    };
 
-  export default Block;
+    return (
+      <>
+        <div class="blockers" style={mystyle}></div>
+
+        <div className="bottom">
+          <div className="white"></div>
+        </div>
+      </>
+    );
+  }
+}
+
+export default Block;
